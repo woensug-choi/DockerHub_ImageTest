@@ -1,0 +1,8 @@
+ARG ROS_DISTRO="jazzy"
+FROM osrf/ros:$ROS_DISTRO-desktop-full
+ARG BRANCH="ros2"
+
+RUN touch /root/.entrypoint && printf '\033[1;36m =====\n' >> /root/.entrypoint && \
+    printf 'IMAGE GENERATION TEST\n\033[0m' >> /root/.entrypoint && \
+    printf '\033[1;32m\n =====\n\033[0m' >> /root/.entrypoint >> /root/.entrypoint && \
+    echo 'cat /root/.entrypoint' >> /root/.bashrc
