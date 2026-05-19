@@ -1,4 +1,4 @@
-FROM osrf/ros:jazzy-desktop-full
+FROM osrf/ros:$ROS_DISTRO-desktop-full
 ARG BRANCH="ros2"
 
 RUN touch /root/.entrypoint && printf '\033[1;36m =====\n' >> /root/.entrypoint && \
