@@ -38,7 +38,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: testimage
+          images: woensugchoi/docker_github_action_test
           tags: |
             type=ref,event=branch
             type=semver,pattern={{version}}
